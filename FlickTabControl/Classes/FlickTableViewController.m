@@ -73,24 +73,9 @@
 	[self.flickTabView awakeFromNib];
 	
 	self.tableView.tableHeaderView = [[[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 1.0f, 43.0f)] autorelease];
+	self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(43.0f, 0.0f, 0.0f, 0.0f);
 	
 	[self.view addSubview:self.flickTabView];
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-	if(scrollView == self.tableView) {
-		float y = (-scrollView.contentOffset.y);
-		float height = y > 0.0f ? 43.0f + y : 43.0f;
-		y = y > 0.0f ? 0.0f : y;
-		self.flickTabView.frame = CGRectMake(0.0f, y, self.tableView.frame.size.width, height);
-		
-		float inset = 0.0f;
-		if(scrollView.contentOffset.y < 44.0f) {
-			inset = 44.0f + -scrollView.contentOffset.y;
-		}
-		
-		self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(inset, 0.0f, 0.0f, 0.0f);
-	}
 }
 
 - (void)didReceiveMemoryWarning {
