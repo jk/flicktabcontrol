@@ -21,7 +21,7 @@
 		imageView.backgroundColor = [UIColor clearColor];
 		imageView.image = [[UIImage imageNamed:@"flick-tab-over.png"] stretchableImageWithLeftCapWidth:11.0f topCapHeight:0.0f];
 		imageView.hidden = YES;
-		imageView.contentMode = UIViewContentModeScaleAspectFit;
+		imageView.contentMode = UIViewContentModeScaleToFill;
 		
 		label = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, -1.0f, frame.size.width, frame.size.height)];
 		label.textAlignment = UITextAlignmentCenter;
