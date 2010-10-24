@@ -55,7 +55,7 @@
 		CGSize size = [str sizeWithFont:button.font];
 		
 		button.frame = CGRectMake(origin_x, 0.0f, size.width+20.0f, 43.0f);
-		origin_x += size.width + 3.0f + 20.0f;
+		origin_x += size.width + 3.0f + 15.0f;
 		button.text = str;
 		
 		[scrollView addSubview:button];
